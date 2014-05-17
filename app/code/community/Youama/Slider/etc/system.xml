@@ -1,0 +1,758 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * YouAMA.com
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled with this package
+ * in the file license.txt.
+ *
+ /****************************************************************************
+ *                      MAGENTO EDITION USAGE NOTICE                         *
+ ****************************************************************************/
+ /* This package designed for Magento Community edition YouAMA.com does not
+ * guarantee correct work of this extension on any other Magento edition 
+ * except Magento Community edition. YouAMA.com does not provide extension
+ * support in case of incorrect edition usage.
+ /****************************************************************************
+ *                               DISCLAIMER                                  *
+ ****************************************************************************/
+ /* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *****************************************************
+ * @category   Youama
+ * @package    Youama_Slider
+ * @copyright  Copyright (c) 2012 YouAMA.com (http://www.youama.com/)
+ * @license    http://youama.com/freemodule-license.txt
+ */
+-->
+<config>
+    <tabs>
+        <youama translate="label" module="customer">
+            <label>YOUAMA &#9733;</label>
+            <sort_order>1</sort_order>
+        </youama>
+    </tabs>
+    <sections>
+        <youamaslider translate="label">
+            <label>Youama Slider</label>
+            <tab>youama</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            
+            <groups>
+                <mainoptions translate="label">
+                    <label>Main Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <jquery>
+                            <label>jQuery</label>
+                            <comment>
+                                <![CDATA[Include jQuery library if your Magento has not yet]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </jquery>
+                        <jquery_ui>
+                            <label>jQuery UI</label>
+                            <comment>
+                                <![CDATA[Include jQuery UI if your Magento has not yet]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </jquery_ui>
+                    </fields>
+                </mainoptions>
+                <readme translate="label">
+                    <label>Information about Youama Slider</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>-1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <information>
+                            <label>The Code</label>
+                            <comment>
+                                <![CDATA[Past the following Block into any page<br />(Homepage example)<br /><strong>{{block type="youama_slider/slider" name="youamaslider" alias="youamaslider" template="youama/slider/slider.phtml"}}</strong>]]>
+                            </comment>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </information>
+                    </fields>
+                </readme>
+                <slideritem1 translate="label">
+                    <label>Slider Item #1</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <image translate="label comment">
+                            <label>Image</label>
+                            <comment>
+                                <![CDATA[Upload an image from your computer]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image>
+
+                        <link translate="label comment">
+                            <label>Link</label>
+                            <comment>
+                                <![CDATA[Link on the Image]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                                             
+                        <title translate="label comment">
+                            <label>Text</label>
+                            <comment>
+                                <![CDATA[Text on the Image - HTML allowed]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                    </fields>
+                </slideritem1>
+                
+                <slideritem2 translate="label">
+                    <label>Slider Item #2</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <image translate="label comment">
+                            <label>Image</label>
+                            <comment>
+                                <![CDATA[Upload an image from your computer]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image>
+
+                        <link translate="label comment">
+                            <label>Link</label>
+                            <comment>
+                                <![CDATA[Link on the Image]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                                             
+                        <title translate="label comment">
+                            <label>Text</label>
+                            <comment>
+                                <![CDATA[Text on the Image - HTML allowed]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                    </fields>
+                </slideritem2>
+                
+                <slideritem3 translate="label">
+                    <label>Slider Item #3</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <image translate="label comment">
+                            <label>Image</label>
+                            <comment>
+                                <![CDATA[Upload an image from your computer]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image>
+
+                        <link translate="label comment">
+                            <label>Link</label>
+                            <comment>
+                                <![CDATA[Link on the Image]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                                             
+                        <title translate="label comment">
+                            <label>Text</label>
+                            <comment>
+                                <![CDATA[Text on the Image - HTML allowed]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                    </fields>
+                </slideritem3>
+                
+                <slideritem4 translate="label">
+                    <label>Slider Item #4</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <image translate="label comment">
+                            <label>Image</label>
+                            <comment>
+                                <![CDATA[Upload an image from your computer]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image>
+
+                        <link translate="label comment">
+                            <label>Link</label>
+                            <comment>
+                                <![CDATA[Link on the Image]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                                             
+                        <title translate="label comment">
+                            <label>Text</label>
+                            <comment>
+                                <![CDATA[Text on the Image - HTML allowed]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                    </fields>
+                </slideritem4>
+                
+                <slideritem5 translate="label">
+                    <label>Slider Item #5</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <image translate="label comment">
+                            <label>Image</label>
+                            <comment>
+                                <![CDATA[Upload an image from your computer]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image>
+
+                        <link translate="label comment">
+                            <label>Link</label>
+                            <comment>
+                                <![CDATA[Link on the Image]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                                             
+                        <title translate="label comment">
+                            <label>Text</label>
+                            <comment>
+                                <![CDATA[Text on the Image - HTML allowed]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                    </fields>
+                </slideritem5>
+                
+                <slideritem6 translate="label">
+                    <label>Slider Item #6</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <image translate="label comment">
+                            <label>Image</label>
+                            <comment>
+                                <![CDATA[Upload an image from your computer]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image>
+
+                        <link translate="label comment">
+                            <label>Link</label>
+                            <comment>
+                                <![CDATA[Link on the Image]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link>
+                                             
+                        <title translate="label comment">
+                            <label>Text</label>
+                            <comment>
+                                <![CDATA[Text on the Image - HTML allowed]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                    </fields>
+                </slideritem6>
+                
+                <animations translate="label">
+                    <label>Animation Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>8</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <type translate="label comment">
+                            <label>Animation Type</label>
+                            <comment>
+                                <![CDATA[Type of Animation of the Images]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_animations</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </type>
+                        <speed translate="label comment">
+                            <label>Speed</label>
+                            <comment>
+                                <![CDATA[Speed of the Animations by seconds]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_speed</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </speed>
+                        <pausetime translate="label comment">
+                            <label>Pause Time</label>
+                            <comment>
+                                <![CDATA[Time before next Animation by seconds]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_times</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pausetime>
+                        <hover>
+                            <label>Hover Pause</label>
+                            <comment>
+                                <![CDATA[Pause the Time on hover]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hover>
+                        <slices translate="label comment">
+                            <label>Slices</label>
+                            <comment>
+                                <![CDATA[For Slices Animations]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_pieces</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slices>
+                        <boxcols translate="label comment">
+                            <label>Box Columns</label>
+                            <comment>
+                                <![CDATA[For Box Animations]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_pieces</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </boxcols>
+                        <boxrows translate="label comment">
+                            <label>Box Rows</label>
+                            <comment>
+                                <![CDATA[For Box Animations]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_pieces</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </boxrows>
+                    </fields>
+                </animations>
+                
+                <design translate="label">
+                    <label>Design Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>9</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <width translate="label comment">
+                            <label>Width</label>
+                            <comment>
+                                <![CDATA[Width of the Slider by pixels]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width>
+                        <height translate="label comment">
+                            <label>height</label>
+                            <comment>
+                                <![CDATA[Height of the Slider by pixels]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height>
+                        <texten translate="label comment">
+                            <label>Enable Text</label>
+                            <comment>
+                                <![CDATA[Enable texts with background on the slider]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </texten>
+                        <textsize>
+                            <label>Font size</label>
+                            <comment>
+                                <![CDATA[Font size of the text on the Slider by pixels]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </textsize>
+                        <textpos translate="label comment">
+                            <label>Text Position</label>
+                            <comment>
+                                <![CDATA[Position of Text on the Slider]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_Position</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </textpos>
+                        <textscolor translate="label comment">
+                            <label>Text Color</label>
+                            <comment>
+                                <![CDATA[Color of Text on Slider]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </textscolor>
+                        <bgscolor translate="label comment">
+                            <label>Background Color</label>
+                            <comment>
+                                <![CDATA[Background Color of Text on Slider]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bgscolor>
+                        <textopacity>
+                            <label>Text Opacity</label>
+                            <comment>
+                                <![CDATA[Opacity of the Text and Background on Slider. Value should be between 0.1 and 10]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </textopacity>
+                        <buttonen translate="label comment">
+                            <label>Enable Buttons</label>
+                            <comment>
+                                <![CDATA[Enable Navigation Buttons on the Slider]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </buttonen>
+                        <buttonscolor translate="label comment">
+                            <label>Navigate Button Color (to)</label>
+                            <comment>
+                                <![CDATA[Gradien Color of the Navigate Buttons on Slider]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </buttonscolor>
+                        <buttonscolorup translate="label comment">
+                            <label>Navigate Button Color (from)</label>
+                            <comment>
+                                <![CDATA[Gradien Color of the Navigate Buttons on Slider]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </buttonscolorup>
+                        <buttonpos translate="label comment">
+                            <label>Button Position</label>
+                            <comment>
+                                <![CDATA[Position of Navigate Buttons on the Slider]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>youama_slider/system_config_source_dropdown_Position</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </buttonpos>
+                        <nextpreven translate="label comment">
+                            <label>Enable Next-Prev Buttons</label>
+                            <comment>
+                                <![CDATA[Enable Next-Prev Buttons on the Slider]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </nextpreven>
+                        <nextimage translate="label comment">
+                            <label>Next Button</label>
+                            <comment>
+                                <![CDATA[Upload an image (32x52 pixels) for use custom Next-Prev buttons or not and use Youama's default image]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider/nextprev</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider/nextprev</base_url>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</nextimage>
+                        <previmage translate="label comment">
+                            <label>Prev Button</label>
+                            <comment>
+                                <![CDATA[Upload an image (32x52 pixels) for use custom Next-Prev buttons or not and use Youama's default image]]>
+                            </comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">youama/slider/nextprev</upload_dir>
+                            <base_url type="media" scope_info="1">youama/slider/nextprev</base_url>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</previmage>
+                    </fields>
+                </design>
+                
+                <events translate="label">
+                    <label>Advanced Developer (Hooking events)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>99</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    
+                    <fields>
+                        <beforechange>
+                            <label>Before Change</label>
+                            <comment>
+                                <![CDATA[jQuery script in 'Before Change' event - Triggers before a slide transition]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </beforechange>
+                        <afterchange>
+                            <label>After Change</label>
+                            <comment>
+                                <![CDATA[jQuery script in 'After Change' event - Triggers after a slide transition]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </afterchange>
+                        <slideshowEnd>
+                            <label>Slide Show End</label>
+                            <comment>
+                                <![CDATA[jQuery script in 'Slide Show End' event - Triggers after all slides have been shown]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowEnd>
+                        <lastSlide>
+                            <label>Last Slide</label>
+                            <comment>
+                                <![CDATA[jQuery script in 'Last Slide' event - Triggers when last slide is shown]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </lastSlide>
+                        <afterLoad>
+                            <label>After Load</label>
+                            <comment>
+                                <![CDATA[jQuery script in 'After Load' event - Triggers when slider has loaded]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </afterLoad>
+                    </fields>
+                </events>
+            </groups>
+        </youamaslider>    
+    </sections>
+</config>

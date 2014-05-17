@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!--
+/**
+ * YouAMA.com
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled with this package
+ * in the file license.txt.
+ *
+ /****************************************************************************
+ *                      MAGENTO EDITION USAGE NOTICE                         *
+ ****************************************************************************/
+ /* This package designed for Magento Community edition YouAMA.com does not
+ * guarantee correct work of this extension on any other Magento edition 
+ * except Magento Community edition. YouAMA.com does not provide extension
+ * support in case of incorrect edition usage.
+ /****************************************************************************
+ *                               DISCLAIMER                                  *
+ ****************************************************************************/
+ /* Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *****************************************************
+ * @category   Youama
+ * @package    Youama_Slider
+ * @copyright  Copyright (c) 2012 YouAMA.com (http://www.youama.com/)
+ * @license    http://youama.com/freemodule-license.txt
+ */
+-->
+<config>
+    <modules>
+        <Youama_Slider>
+            <version>2.2.2</version>
+        </Youama_Slider>
+    </modules>
+    <global>
+        <models>
+            <youama_slider>
+                <class>Youama_Slider_Model</class>
+            </youama_slider>
+        </models>
+        <blocks>
+            <youama_slider>
+                <class>Youama_Slider_Block</class>
+            </youama_slider>
+        </blocks>
+        <helpers>
+            <youama_slider>
+                <class>Youama_Slider_Helper</class>
+            </youama_slider>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <Youama_Slider>
+                    <file>youama_slider.xml</file>
+                </Youama_Slider>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <Youama_Slider>
+                    <file>youama_slider_admin.xml</file>
+                </Youama_Slider>
+            </updates>
+        </layout>
+    </adminhtml>
+    
+    <default>
+        <youamaslider>
+            <mainoptions>
+                <jquery>1</jquery>
+                <jquery_ui>1</jquery_ui>
+            </mainoptions>
+            <slideritem1>
+                <link>#</link>
+                <title>You installed the sweet Youama Slider</title>
+            </slideritem1>
+            <slideritem2>
+                <link>#</link>
+                <title>Lorem ipsum dolore sit amet</title>
+            </slideritem2>
+            <animations>
+                <type>random</type>
+                <speed>400</speed>
+                <pausetime>4000</pausetime>
+                <hover>1</hover>
+                <slices>15</slices>
+                <boxcols>8</boxcols>
+                <boxrows>4</boxrows>
+            </animations>
+            <design>
+                <width>900</width>
+                <height>340</height>
+                <texten>1</texten>
+                <textsize>18</textsize>
+                <textpos>leftbottom</textpos>
+                <textopacity>0.8</textopacity>
+                <textscolor>ffffff</textscolor>
+                <bgscolor>000000</bgscolor>
+                <buttonen>1</buttonen>
+                <buttonscolor>bbbbbb</buttonscolor>
+                <buttonscolorup>ffffff</buttonscolorup>
+                <buttonpos>righttop</buttonpos>
+                <nextpreven>1</nextpreven>
+            </design>
+        </youamaslider>
+    </default>
+</config>
